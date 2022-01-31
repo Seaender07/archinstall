@@ -18,6 +18,6 @@ start:
 	@echo ${exec_status}
 
 install: comp
-	mv archinstall /etc/
-	cd /etc
+	mv archinstall /bin/
+	cd /bin
 	chmod +x archinstall
