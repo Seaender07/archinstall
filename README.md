@@ -2,5 +2,9 @@
 A simple, lightweight, CLI Arch Linux installer
 
 
-<h3>How to compile</h3>
-<code>make comp</code>
+<h2>Usage:</h2>
+First, clone locally the repo.<br>
+<code>git clone https://github.com/Seaender07/archinstall.git</code>
+Then, enter the directory and install it.<br>
+<code>cd archinstall</code>
+<code>make install</code>
