@@ -16,3 +16,8 @@ clean:
 
 start:
 	@echo ${exec_status}
+
+install: comp
+	mv archinstall /etc/
+	cd /etc
+	chmod +x archinstall
