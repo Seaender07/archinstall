@@ -10,6 +10,6 @@ Enter the directory:<br>
 <code>cd archinstall</code><br>
 <br>
 Then, install it using the script:<br>
-<code>./install.sh</code>
+<code>./install.sh</code><br>
 Or compile and install with:<br>
-<code>make install</code> <-- (make and gcc requiredi)
+<code>make install</code> <-- (make and gcc required)<br>
