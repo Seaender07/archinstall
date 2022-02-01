@@ -12,7 +12,7 @@ int pac::strap::install(std::string kerned)
 	std::string kern = (kerned == "mainline") ? "linux" : ("linux-" + kerned);
 	std::string pacs = "base " + kern + " linux-firmware";
 	
-	std::string toinstall_s = "pacstrap /mnt " + pacs;
+	std::string toinstall_s = "pacstrap /mnt --noconfirm " + pacs;
 
 	system(utils::logop(toinstall_s).c_str());					//	< ---------------------------------------
 	
