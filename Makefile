@@ -17,6 +17,6 @@ clean:
 start:
 	@echo ${exec_status}
 
-install:
+install: comp
 	mv archinstall /bin/
 	chmod +x /bin/archinstall
