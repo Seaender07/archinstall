@@ -13,7 +13,7 @@ int part::mkfs(std::string fst, std::string part)
 
 	std::cout << utils::logop(tomake_s) << std::endl;
 
-	system(utils::logop(tomake_s).c_str())							//	< ---------------------------------------
+	system(utils::logop(tomake_s).c_str());							//	< ---------------------------------------
 	
 	std::cout << "Done.\n";
 	utils::logmsg("Done.");
@@ -45,7 +45,7 @@ int part::genfstab()
 	std::cout << "\nGenerating the filesystem table...\n";
 	utils::logmsg("Generating the filesystem table...");
 
-	system(utils::logop("genfstab -U /mnt >> /mnt/etc/fstab"));				//	< ---------------------------------------
+	system("genfstab -U /mnt >> /mnt/etc/fstab");				//	< ---------------------------------------
 
 	std::cout << "Done.\n";
 	utils::logmsg("Done.");
