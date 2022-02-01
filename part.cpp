@@ -13,7 +13,7 @@ int part::mkfs(std::string fst, std::string part)
 
 	std::cout << utils::logop(tomake_s) << std::endl;
 
-	//system(utils::logop(tomake_s).c_str())							< ---------------------------------------
+	system(utils::logop(tomake_s).c_str())							//	< ---------------------------------------
 	
 	std::cout << "Done.\n";
 	utils::logmsg("Done.");
@@ -31,8 +31,8 @@ int part::mount(std::string mnt, std::string swap)
 
 	std::cout << utils::logop("sample_command") << std::endl;
 
-	//system(utils::logop(tomnt_s).c_str());							< ---------------------------------------
-	//system(utils::logop(toswap_s).c_str());							< ---------------------------------------
+	system(utils::logop(tomnt_s).c_str());							//	< ---------------------------------------
+	system(utils::logop(toswap_s).c_str());							//	< ---------------------------------------
 
 	std::cout << "Done.\n";
 	utils::logmsg("Done.");
@@ -45,7 +45,7 @@ int part::genfstab()
 	std::cout << "\nGenerating the filesystem table...\n";
 	utils::logmsg("Generating the filesystem table...");
 
-	//system(utils::logop("genfstab -U /mnt >> /mnt/etc/fstab"));					< ---------------------------------------
+	system(utils::logop("genfstab -U /mnt >> /mnt/etc/fstab"));				//	< ---------------------------------------
 
 	std::cout << "Done.\n";
 	utils::logmsg("Done.");
