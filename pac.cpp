@@ -30,7 +30,6 @@ int pac::strap::setmirr(std::string CC)
 	std::string toreach_s = "reflector -c \"" + CC + "\" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist";
 
 	system("cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak");		//	< ---------------------------------------
-	std::cout << utils::logop(toreach_s) << std::endl;
 	system(utils::logop(toreach_s).c_str());					//	< ---------------------------------------
 	
 	std::cout << "Done.\n";
@@ -44,7 +43,6 @@ int pac::man::refresh()
 	std::cout << "\nSyncing packages\' repositories...\n";
 	utils::logmsg("Syncing packages repositories...");
 
-	std::cout << utils::logop("pacman -Syy") << std::endl;
 	system(utils::logop("pacman -Syy").c_str());					//	< ---------------------------------------
 	
 	std::cout << "Done.\n";
@@ -66,7 +64,6 @@ int pac::man::install(std::string* pkgs)
 
 	std::string toinstall_s = "pacman -S --noconfirm" + pacs;
 
-	std::cout << utils::logop(toinstall_s) << std::endl;
 	system(utils::logop(toinstall_s).c_str());					//	< ---------------------------------------
 	
 	std::cout << "Done.\n";

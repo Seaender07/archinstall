@@ -11,8 +11,6 @@ int part::mkfs(std::string fst, std::string part)
 
 	std::string tomake_s = (fst == "swap" ? "mkswap" : "mkfs." + fst) + " " + part;
 
-	std::cout << utils::logop(tomake_s) << std::endl;
-
 	system(utils::logop(tomake_s).c_str());							//	< ---------------------------------------
 	
 	std::cout << "Done.\n";
@@ -28,8 +26,6 @@ int part::mount(std::string mnt, std::string swap)
 
 	std::string tomnt_s = "mount " + mnt + " /mnt";
 	std::string toswap_s = "swapon " + swap;
-
-	std::cout << utils::logop("sample_command") << std::endl;
 
 	system(utils::logop(tomnt_s).c_str());							//	< ---------------------------------------
 	system(utils::logop(toswap_s).c_str());							//	< ---------------------------------------
