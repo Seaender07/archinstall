@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-mv ./archinstall /bin/
-chmod +x /bin/archinstall
+mv ./archinstall ../
+chmod +x ../archinstall
