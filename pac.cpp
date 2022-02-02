@@ -6,7 +6,7 @@
 
 int pac::strap::install(std::string kerned)
 {
-	std::cout << "\nInstalling basic packages...\n";
+	std::cout << ylw << "\nInstalling basic packages...\n" << def;
 	utils::logmsg("Installing basic packages...");
 
 	std::string kern = (kerned == "mainline") ? "linux" : ("linux-" + kerned);
@@ -16,7 +16,7 @@ int pac::strap::install(std::string kerned)
 
 	system(utils::logop(toinstall_s).c_str());					//	< ---------------------------------------
 	
-	std::cout << "Done.\n";
+	std::cout << grn << "Done.\n" << def;
 	utils::logmsg("Done.");
 
 	return 0;
@@ -24,7 +24,7 @@ int pac::strap::install(std::string kerned)
 
 int pac::strap::setmirr(std::string CC)
 {
-	std::cout << "\nReaching national mirror...\n";
+	std::cout << ylw << "\nReaching national mirror...\n" << def;
 	utils::logmsg("Reaching national mirror...");
 		
 	std::string toreach_s = "reflector -c \"" + CC + "\" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist";
@@ -32,7 +32,7 @@ int pac::strap::setmirr(std::string CC)
 	system("cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak");		//	< ---------------------------------------
 	system(utils::logop(toreach_s).c_str());					//	< ---------------------------------------
 	
-	std::cout << "Done.\n";
+	std::cout << grn << "Done.\n" def;
 	utils::logmsg("Done.");
 
 	return 0;
@@ -40,12 +40,12 @@ int pac::strap::setmirr(std::string CC)
 
 int pac::man::refresh()
 {
-	std::cout << "\nSyncing packages\' repositories...\n";
+	std::cout << ylw << "\nSyncing packages\' repositories...\n" << def;
 	utils::logmsg("Syncing packages repositories...");
 
 	system(utils::logop("pacman -Syy").c_str());					//	< ---------------------------------------
 	
-	std::cout << "Done.\n";
+	std::cout << grn << "Done.\n" << def;
 	utils::logmsg("Done.");
 
 	return 0;
@@ -53,7 +53,7 @@ int pac::man::refresh()
 
 int pac::man::install(std::string* pkgs)
 {
-	std::cout << "\nInstalling utilities...\n";
+	std::cout << ylw << "\nInstalling utilities...\n" << def;
 	utils::logmsg("Installing utilities...");
 
 	std::string pacs;
@@ -66,7 +66,7 @@ int pac::man::install(std::string* pkgs)
 
 	system(utils::logop(toinstall_s).c_str());					//	< ---------------------------------------
 	
-	std::cout << "Done.\n";
+	std::cout << grn << "Done.\n" << def;
 	utils::logmsg("Done.");
 
 	return 0;

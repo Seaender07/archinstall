@@ -23,8 +23,6 @@ int main(void)
 
 	if(ifinstall == "YES")
 	{
-		std::cout << "Install entered.\n";
-
 		instmain();
 	}
 	else

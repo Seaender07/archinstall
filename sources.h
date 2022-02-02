@@ -9,6 +9,13 @@
 #define logoutps " > ./archinstall.log"
 #define logoutp " >> ./archinstall.log"
 
+#define red "\033[31m"
+#define ylw "\033[33m"
+#define grn "\033[32m"
+#define def "\033[0m"
+#define inv "\033[7m"
+#define unv "\033[27m"
+
 int instmain();
 
 namespace part
